@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="bg-[#1678F2] py-20">
-      <div className="max-w-[1110px] mx-auto flex justify-between">
+      <div className="lg:max-w-[1110px] max-w-xs mx-auto flex lg:flex-row flex-col justify-between lg:space-y-0 space-y-10 mb-10">
         <div>
           <img src="/assets/images/doctor_logo.svg" className="mb-5" alt="" />
           <p className="text-white italic mb-5">
@@ -15,7 +15,9 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <h1 className="text-white font-semibold text-xl mb-6">Company Info</h1>
+          <h1 className="text-white font-semibold text-xl mb-6">
+            Company Info
+          </h1>
           <ul className="space-y-4">
             <li className="text-white text-base">About</li>
             <li className="text-white text-base">Services</li>
@@ -34,7 +36,10 @@ export default function Footer() {
             <li className="text-white text-base">Phone: +1 12345678</li>
           </ul>
         </div>
-        <hr className="text-white border" />
+      </div>
+      <div className="lg:max-w-[1110px] max-w-xs mx-auto">
+        <hr className="text-white border mb-10" />
+        <p className="text-center text-white text-base">© Doctor all rights 2023 - Designed by remmcal</p>
       </div>
     </footer>
   );

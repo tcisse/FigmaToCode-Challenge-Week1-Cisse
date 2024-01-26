@@ -54,21 +54,21 @@ const testimonialCard = [
   },
 ];
 
-export default function TestimonialCard() {
+export default function TestimonialMobileCard() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrevClick = () => {
-    setCurrentIndex((prevIndex) => Math.max(0, prevIndex - 4));
+    setCurrentIndex((prevIndex) => Math.max(0, prevIndex - 1));
   };
 
   const handleNextClick = () => {
     setCurrentIndex((prevIndex) =>
-      Math.min(prevIndex + 4, testimonialCard.length - 4)
+      Math.min(prevIndex + 1, testimonialCard.length - 1)
     );
   };
 
   return (
-    <div className="bg-[#F2F7FF] py-32 hidden lg:block">
+    <div className="bg-[#F2F7FF] py-32 lg:hidden block">
       <div className="text-center mx-auto mb-20">
         <h1 className="text-4xl font-semibold lg:max-w-xl max-w-xs mx-auto mb-10">
           What our great customers say <br /> about Dr. Matthew Anderson
@@ -78,7 +78,7 @@ export default function TestimonialCard() {
           eiusmod tempor incididunt ut labore et dolore
         </p>
       </div>
-      <div className="relative max-w-5xl mx-auto">
+      <div className="relative lg:max-w-5xl max-w-xs mx-auto">
         <button
           className="absolute -left-10 top-1/2 transform -translate-y-1/2 z-10"
           onClick={handlePrevClick}
@@ -88,7 +88,7 @@ export default function TestimonialCard() {
         </button>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-10 max-w-5xl mx-auto">
           {testimonialCard
-            .slice(currentIndex, currentIndex + 4)
+            .slice(currentIndex, currentIndex + 1)
             .map((index, i) => (
               <motion.div
                 key={index.name}
@@ -128,7 +128,7 @@ export default function TestimonialCard() {
         <button
           className="absolute -right-10 top-1/2 transform -translate-y-1/2 z-10"
           onClick={handleNextClick}
-          disabled={currentIndex >= testimonialCard.length - 4}
+          disabled={currentIndex >= testimonialCard.length - 1}
         >
           <img src="/assets/icons/next_click.svg" alt="" />
         </button>
