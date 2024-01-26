@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import BookButton from "./BookButton";
+import { motion } from "framer-motion";
 
 export default function ServicesCard() {
   return (
