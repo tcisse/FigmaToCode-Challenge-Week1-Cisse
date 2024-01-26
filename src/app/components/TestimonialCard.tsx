@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const testimonialCard = [
   {
@@ -53,9 +54,7 @@ const testimonialCard = [
   },
 ];
 
-
 export default function TestimonialCard() {
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrevClick = () => {
@@ -90,10 +89,28 @@ export default function TestimonialCard() {
         <div className="grid md:grid-cols-2 grid-cols-1 gap-10 max-w-5xl mx-auto">
           {testimonialCard
             .slice(currentIndex, currentIndex + 4)
-            .map((index) => (
-              <div
+            .map((index, i) => (
+              <motion.div
                 key={index.name}
                 className="flex flex-col shadow-custom-shadow rounded-custom bg-white p-testimomial_padding"
+                initial={{
+                  opacity: 0,
+                  translateX: i % 2 === 0 ? -50 : 50,
+                  scale: 0.5,
+                  translateY: -50,
+                }}
+                animate={{ opacity: 1, translateX: 0, translateY: 0, scale: 1 }}
+                transition={{
+                  duration: 4,
+                  delay: i * 0.5,
+                  ease: [0, 0.71, 0.5, 1.01],
+                  scale: {
+                    type: "spring",
+                    damping: 5,
+                    stiffness: 100,
+                    restDelta: 0.001,
+                  },
+                }}
               >
                 <q className="text-[#6C87AE] text-base mb-4">{index.text}</q>
                 <div className="flex items-center space-x-3">
@@ -105,7 +122,7 @@ export default function TestimonialCard() {
                     <span>{index.profile}</span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
         </div>
         <button
