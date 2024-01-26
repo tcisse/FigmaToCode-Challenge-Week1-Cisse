@@ -146,7 +146,7 @@ export default function Home() {
             <h1 className="lg:text-4xl text-2xl font-semibold mb-5">
               A dedicated doctor with the core mission to help
             </h1>
-            <p className="text-base text-[#6C87AE] lg:w-2/4 text-center mx-4">
+            <p className="text-base text-[#6C87AE] lg:w-2/4 mx-auto text-center">
               orem ipsum dolor sit amet, consectetur adipiscing elit. Quam proin
               nibh cursus at sed sagittis amet, sed. Tristique id nibh lobortis
               nunc elementum. Tellus quam mauris aenean turpis vulputate sodales

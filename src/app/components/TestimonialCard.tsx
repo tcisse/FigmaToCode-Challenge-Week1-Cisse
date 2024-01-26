@@ -81,8 +81,8 @@ export default function TestimonialCard() {
       <div className="relative max-w-5xl mx-auto">
         <button
           className="absolute -left-10 top-1/2 transform -translate-y-1/2 z-10"
-          onClick={handlePrevClick}
-          disabled={currentIndex === 0}
+          // onClick={handlePrevClick}
+          // disabled={currentIndex === 0}
         >
           <img src="/assets/icons/prev_click.svg" alt="" />
         </button>
@@ -127,8 +127,8 @@ export default function TestimonialCard() {
         </div>
         <button
           className="absolute -right-10 top-1/2 transform -translate-y-1/2 z-10"
-          onClick={handleNextClick}
-          disabled={currentIndex >= testimonialCard.length - 4}
+          // onClick={handleNextClick}
+          // disabled={currentIndex >= testimonialCard.length - 4}
         >
           <img src="/assets/icons/next_click.svg" alt="" />
         </button>

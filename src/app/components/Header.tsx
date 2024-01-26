@@ -41,6 +41,14 @@ export default function Header() {
           </div>
         </header>
       </div>
+      <div className="lg:hidden block">
+        <header className="bg-[#F2F7FF] flex justify-between items-center px-4">
+          <img src="/assets/images/header_logo.svg" alt="" />
+          <div className="pt-5">
+            <img src="/assets/icons/mobile_menu.svg" alt="" />
+          </div>
+        </header>
+      </div>
       <section className="mx-auto flex items-center bg-[#F2F7FF] py-24">
         <div className="lg:max-w-7xl max-w-xs flex lg:flex-row flex-col-reverse items-center mx-auto">
           <div className="space-y-4 lg:text-left text-center">
