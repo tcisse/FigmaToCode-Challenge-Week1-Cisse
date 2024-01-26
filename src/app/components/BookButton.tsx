@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function BookButton() {
   return (
-    <div className="flex items-center justify-center rounded-full bg-button-gradient w-[252px] py-3 gap-2">
+    <div className="flex items-center justify-center rounded-full bg-button-gradient lg:w-[252px] py-3 gap-2">
       <Image
         src="/assets/icons/whatsapp.svg"
         width="20"

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import BookButton from "./BookButton";
+import { lazy } from "react";
 
 export default function Header() {
   return (
@@ -42,7 +43,7 @@ export default function Header() {
       </div>
       <section className="mx-auto flex items-center bg-[#F2F7FF] py-24">
         <div className="lg:max-w-7xl max-w-xs flex lg:flex-row flex-col-reverse items-center mx-auto">
-          <div className="space-y-4 text-center">
+          <div className="space-y-4 lg:text-left text-center">
             <h4 className="text-[#00BFA5]">Dr. Matthew Anderson</h4>
             <h1 className="text-5xl font-bold">
               A dedicated doctor you can trust
@@ -71,6 +72,7 @@ export default function Header() {
               height={38}
               width={38}
               alt=""
+              loading="lazy"
             />
             <div className="">
               <h2 className="text-white font-semibold text-lg">
